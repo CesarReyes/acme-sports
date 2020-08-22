@@ -14,11 +14,13 @@ echo '********************************'
 sleep 5;
 
 docker-compose run --rm wordpress-cli core download --version=latest --force --quiet
+# docker-compose run --rm wordpress-cli core download --version=5.0 --force --quiet
 docker-compose run --rm wordpress-cli core install --path="/var/www/html" --url="http://localhost:8000" --title="ACME Sports" --admin_user=admin --admin_password=secret --admin_email=foo@acmesports.com
 docker-compose run --rm wordpress-cli wp rewrite structure "/%postname%/"
 docker-compose run --rm wordpress-cli site empty --yes
 docker-compose run --rm wordpress-cli theme delete twentyseventeen twentynineteen
 docker-compose run --rm wordpress-cli widget delete search-2 recent-posts-2 recent-comments-2 archives-2 categories-2 meta-2
+docker-compose run --rm wordpress-cli option update blogdescription 'Your Sports Site!' 
 
 echo "\r"
 echo '*******************************'
