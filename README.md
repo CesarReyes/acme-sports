@@ -1,7 +1,8 @@
 # ACME Sports web site installer
 
-This installs a clean Wordpress version including the Results NFL teams plungin and the test page.
+Installs a clean Wordpress version including the Results NFL teams plugin and the test page.
 
+## After install
 * To see the working solution go to: <http://localhost:8000/nfl-teams>  
 * WP admin side go to: <http://localhost:8000/wp-admin>  
 * User/Pwd: admin/secret  
